@@ -6,6 +6,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh 'npm install'
+                echo "npm installed successfully"
             }
         }
         stage('Unit test') {
