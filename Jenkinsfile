@@ -7,6 +7,7 @@ pipeline {
             steps {
                 sh 'ls -ltr'
                 sh 'pwd'
+                sh 'cd ../workspace/'
                 sh 'npm install'
                 echo "npm installed successfully"
             }
