@@ -7,7 +7,7 @@ pipeline {
             steps {
                 sh 'ls -ltr'
                 sh 'pwd'
-                sh 'cd ../workspace/'
+                sh 'cd /home/centos/workspace/'
                 sh 'npm install'
                 echo "npm installed successfully"
             }
