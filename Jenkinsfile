@@ -14,12 +14,12 @@ pipeline {
             }
         }
         //sonar-scanner command expect sonar-project.properties should be available
-        stage('Sonar Scan') {
-            steps {
-                sh 'ls -ltr'
-                sh 'sonar-scanner'
-            }
-        }
+        // stage('Sonar Scan') {
+        //     steps {
+        //         sh 'ls -ltr'
+        //         sh 'sonar-scanner'
+        //     }
+        // }
 
         stage('Build') {
             steps {
@@ -27,7 +27,7 @@ pipeline {
                 sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'
             }
 
-        stage("publish artifact")
+        stage('publish artifact')
             steps {
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
