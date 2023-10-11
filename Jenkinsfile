@@ -8,7 +8,7 @@ pipeline {
                 sh 'ls -ltr'
                 sh 'pwd'
                 sh 'cd /home/centos/workspace/Roboshop/catalogue'
-                sh 'npm install'
+                //sh 'npm install'
                 echo "npm installed successfully"
             }
         }
