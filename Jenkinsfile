@@ -27,7 +27,7 @@ pipeline {
                 sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'
             }
         }
-        stage('publish artifact')
+        stage('publish artifact'){
             steps {
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
@@ -44,7 +44,8 @@ pipeline {
                         type: 'zip']
                     ]
                 )  
-            }  
+            }
+        }  
         stage('Deploy') {
             steps {
                 echo "Deployment"
