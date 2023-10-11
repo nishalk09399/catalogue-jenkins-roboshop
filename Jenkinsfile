@@ -26,7 +26,7 @@ pipeline {
                 sh 'ls -ltr'
                 sh 'zip -r catalogue.zip ./* --exclude=.git --exclude=.zip'
             }
-
+        }
         stage('publish artifact')
             steps {
                 nexusArtifactUploader(
