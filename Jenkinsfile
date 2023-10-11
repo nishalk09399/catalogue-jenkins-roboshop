@@ -6,6 +6,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh 'ls -ltr'
+                sh 'pwd'
                 //sh 'npm install'
                 echo "npm installed successfully"
             }
