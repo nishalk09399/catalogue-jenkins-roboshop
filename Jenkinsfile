@@ -1,4 +1,4 @@
-//this pipeline is use to run the roboshop catalogue component
+//this pipeline is use to run the roboshop catalogue component this is the CI process 
 
 pipeline {
     agent { node { label 'AGENT-1' } }
@@ -8,7 +8,7 @@ pipeline {
                 sh 'ls -ltr'
                 sh 'pwd'
                 sh 'cd /home/centos/workspace/Roboshop/catalogue'
-                //sh 'npm install'
+                sh 'npm install'
                 echo "npm installed successfully"
             }
         }
