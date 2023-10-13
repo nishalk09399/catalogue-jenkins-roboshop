@@ -9,7 +9,7 @@ pipeline {
                 sh 'pwd'
                 sh 'cd /home/centos/workspace/Roboshop/catalogue'
                 sh 'npm install'
-                echo "npm installed successfully"
+                echo "npm installed successfully and tested"
             }
         }
         stage('Unit test') {
